@@ -1,0 +1,76 @@
+*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+[MUTAG] (188 graphs, 18 average nodes, 2 classes)
+*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+python main.py --epochs 1000 --batch_size 16 --capsule-dimensions 128 --capsule-num 5 --dropout 0.7 --theta 0.1 --weight_decay 1e-3 --dataset MUTAG 
+Train Acc: 92.79, Test Acc (C1): 93.16 6.10, Test Acc (C2): 95.79 4.15, Duration: 340.858   (sota)
+
+
+*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+[ENZYMES] (600 graphs, 32 average nodes, 6 classes)
+*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+python main.py --epochs 1000 --batch_size 16 --capsule-dimensions 128 --capsule-num 10 --dropout 0.3 --theta 0.1 --dataset ENZYMES 
+Train Acc: 99.63, Test Acc (C1): 78.00 4.89, Test Acc (C2): 84.17 4.03, Duration: 1866.852      (sota)
+
+
+*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+[PROTEINS] (1113 graphs, 39 average nodes, 2 classes)	max_node_num=620
+*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+python main.py --epochs 500 --batch_size 128 --capsule-dimensions 128 --capsule-num 25 --dropout 0.7 --theta 0.1 --weight_decay 1e-3 --dataset PROTEINS
+Train Acc: 84.64, Test Acc (C1): 77.99 3.16, Test Acc (C2): 81.32 2.23, Duration: 3190.706  (sota)
+
+
+*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+[DD] (1178 graphs, 284 average nodes, 2 classes)	max_node_num=5748
+*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+python main.py --epochs 1000 --batch_size 64 --capsule-dimensions 32 --capsule-num 20 --dropout 0.7 --theta 0.1 --dataset DD
+Train Acc: 94.83, Test Acc (C1): 80.99 2.58, Test Acc (C2): 84.04 2.38, Duration: 11079.363
+
+*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+[NCI1] (4110 graphs, 30 average nodes, 2 classes)	max_node_num=111
+*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+python main.py --epochs 1000 --batch_size 128 --capsule-dimensions 128 --capsule-num 10 --dropout 0.2 --theta 0.1 --dataset NCI1
+Train Acc: 94.49, Test Acc (C1): 84.87 1.68, Test Acc (C2): 86.84 1.32, Duration: 5363.862  (sota)
+
+
+*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+[COLLAB] (5000 graphs, 74 average nodes, 3 classes)	max_node_num=492
+*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+python main.py --epochs 500 --batch_size 256 --capsule-dimensions 128 --capsule-num 20 --dropout 0.1 --theta 0.1 --lr 0.001 --dataset COLLAB
+Train Acc: 90.81, Test Acc (C1): 82.86 1.81, Test Acc (C2): 84.80 1.57, Duration: 8614.545 (sota --)
+
+
+*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+[IMDB-BINARY] (1000 graphs, 19 average nodes, 2 classes)
+*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+python main.py --epochs 100 --batch_size 256 --capsule-dimensions 128 --capsule-num 10 --dropout 0.1 --theta 0.1 --lr 0.003 --dataset IMDB-BINARY
+Train Acc: 86.48, Test Acc (C1): 77.20 4.73, Test Acc (C2): 79.80 3.39, Duration: 87.555   (sota)
+
+
+*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+[IMDB-MULTI] (1500 graphs, 13 average nodes, 3 classes)	max_node_num=89
+*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+python main.py --epochs 300 --batch_size 64 --capsule-dimensions 128 --capsule-num 10 --dropout 0 --theta 0.1 --lr 0.003 --dataset IMDB-MULTI
+Train Acc: 54.81, Test Acc (C1): 52.80 2.45, Test Acc (C2): 55.80 2.20, Duration: 571.339 (add bias in linear disentangle)  (sota)
+
+
+*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+[NCI109] (4127 graphs, 30 average nodes, 2 classes)	max_node_num=111 (sota C1: 81.12±1.28)
+*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+python main.py --epochs 1000 --batch_size 512 --capsule-dimensions 128 --capsule-num 16 --dropout 0.1 --theta 0.1 --dataset NCI109
+Train Acc: 98.49, Test Acc (C1): 83.91 1.27, Test Acc (C2): 85.90 1.16, Duration: 3097.177  (sota)
+
+
+*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+[PTC_MR] (344 graphs, 14 average nodes, 2 classes)	max_node_num=64 (sota C1: 66.01±5.91)
+*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+python main.py --epochs 500 --batch_size 16 --capsule-dimensions 64 --capsule-num 15 --dropout 0.5 --theta 0.1 --weight_decay 1e-3 --dataset PTC_MR 
+Train Acc: 81.01, Test Acc (C1): 66.54 7.97, Test Acc (C2): 74.39 6.38, Duration: 555.150   (sota)
+
+
+*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+[REDDIT-BINARY] (2000 graphs, 430 average nodes, 2 classes)
+*-----*-----*-----*-----*-----*-----*-----*-----*-----*
+python main.py --epochs 300 --batch_size 16 --capsule-dimensions 128 --capsule-num 15 --dropout 0.1 --theta 0.1 --lr 0.001 --dataset REDDIT-BINARY
+Train Acc: 94.68, Test Acc (C1): 93.15 1.58, Test Acc (C2): 95.30 1.30, Duration: 12776.907     (sota)
+
+
