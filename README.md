@@ -1,5 +1,5 @@
 # HGCN (Hierarchical Graph Capsule Network)
-Code of the AAAI 2021 paper [HGCN](https://arxiv.org/abs/2012.08734) 
+Code of the AAAI 2021 paper [HGCN](https://arxiv.org/abs/2012.08734) --- [Supplementary](https://github.com/uta-smile/HGCN/blob/main/supplementary.pdf)
 
 ## Prerequisites and Dependencies
 Option 1: Nvidia Docker image
